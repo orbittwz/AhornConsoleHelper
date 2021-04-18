@@ -1,0 +1,60 @@
+Copy a room from another map
+======================================
+celesteDir = get(Ahorn.config, "celeste_dir", "")
+m = loadMap(joinpath(celesteDir, "Content", "Maps", "4-GoldenRidge.bin"))
+roomName = "lvl_a-00"
+room = getRoomByName(m, roomName)
+push!(loadedState.map.rooms, room)
+updateTreeView!(roomList, getTreeData(loadedState.map))
+return true
+
+Change rooms coordinates
+======================================
+
+for room in Ahorn.loadedState.map.rooms
+    room.position = room.position .+ (0, 500)
+end
+
+updateTreeView!(roomList, getTreeData(loadedState.map))
+
+Change rooms color
+======================================
+
+for room in Ahorn.loadedState.map.rooms
+    room.color = 0
+end
+
+updateTreeView!(roomList, getTreeData(loadedState.map))
+
+Copy room within the map itself
+======================================
+
+roomName = "1"
+room = getRoomByName(loadedState.map, roomName)
+roomcopy = deepcopy(room)
+roomcopy.name = "1-copy"
+roomcopy.position = roomcopy.position .+ (200,200)
+push!(loadedState.map.rooms, roomcopy)
+updateTreeView!(roomList, getTreeData(loadedState.map))
+return true
+
+Change map package name
+======================================
+
+loadedState.map.package = "abc"
+
+Print rooms list
+======================================
+
+println.(getfield.(Ahorn.loadedState.map.rooms, :name))
+
+Copy SGs
+======================================
+
+celesteDir = get(Ahorn.config, "celeste_dir", "")
+m = loadMap(joinpath(celesteDir, "Content", "Maps", "2-OldSite.bin"))
+fg = deepcopy(m.style.foregrounds)
+bg = deepcopy(m.style.backgrounds)
+append!(loadedState.map.style.foregrounds, fg)
+append!(loadedState.map.style.backgrounds, bg)
+return true
