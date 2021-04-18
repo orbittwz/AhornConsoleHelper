@@ -1,0 +1,2081 @@
+diff --git "a/src/entities/badelineboost.jl" "b/src/entities/badelineboost.jl"
+index 8a8d692..1277f3e 100644
+--- "a/src/entities/badelineboost.jl"
++++ "b/src/entities/badelineboost.jl"
+@@ -3,7 +3,7 @@ module BadelineBoost
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Badeline Boost" => Ahorn.EntityPlacement(
++    "Reflection - Badeline Boost" => Ahorn.EntityPlacement(
+         Maple.BadelineBoost
+     ),
+ )
+diff --git "a/src/entities/badelineboss.jl" "b/src/entities/badelineboss.jl"
+index a2f4865..b5464fa 100644
+--- "a/src/entities/badelineboss.jl"
++++ "b/src/entities/badelineboss.jl"
+@@ -3,7 +3,7 @@ module BadelineBoss
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Badeline Boss" => Ahorn.EntityPlacement(
++    "Reflection - Badeline Boss" => Ahorn.EntityPlacement(
+         Maple.BadelineBoss,
+     )
+ )
+diff --git "a/src/entities/badelinefallingblock.jl" "b/src/entities/badelinefallingblock.jl"
+index a0952b9..b1a9eff 100644
+--- "a/src/entities/badelinefallingblock.jl"
++++ "b/src/entities/badelinefallingblock.jl"
+@@ -3,7 +3,7 @@ module BadelineFallingBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Badeline Boss Falling Block" => Ahorn.EntityPlacement(
++    "Reflection - Badeline Boss Falling Block" => Ahorn.EntityPlacement(
+         Maple.BadelineFallingBlock,
+         "rectangle",
+     )
+diff --git "a/src/entities/badelinemovingblock.jl" "b/src/entities/badelinemovingblock.jl"
+index fe54e09..9234f21 100644
+--- "a/src/entities/badelinemovingblock.jl"
++++ "b/src/entities/badelinemovingblock.jl"
+@@ -3,7 +3,7 @@ module BadelineMovingBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Badeline Boss Moving Block" => Ahorn.EntityPlacement(
++    "Reflection - Badeline Boss Moving Block" => Ahorn.EntityPlacement(
+         Maple.BadelineMovingBlock,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/bigwaterfall.jl" "b/src/entities/bigwaterfall.jl"
+index 2afd609..bca35bb 100644
+--- "a/src/entities/bigwaterfall.jl"
++++ "b/src/entities/bigwaterfall.jl"
+@@ -3,14 +3,14 @@ module BigWaterfall
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Big Waterfall (FG)" => Ahorn.EntityPlacement(
++    "All - Big Waterfall (FG)" => Ahorn.EntityPlacement(
+         Maple.BigWaterfall,
+         "rectangle",
+         Dict{String, Any}(
+             "layer" => "FG"
+         )
+     ),
+-    "Big Waterfall (BG)" => Ahorn.EntityPlacement(
++    "All - Big Waterfall (BG)" => Ahorn.EntityPlacement(
+         Maple.BigWaterfall,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/birdnpc.jl" "b/src/entities/birdnpc.jl"
+index f630fb1..06743bf 100644
+--- "a/src/entities/birdnpc.jl"
++++ "b/src/entities/birdnpc.jl"
+@@ -3,7 +3,7 @@ module BirdNPC
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Bird NPC" => Ahorn.EntityPlacement(
++    "All - Bird NPC" => Ahorn.EntityPlacement(
+         Maple.Bird
+     )
+ )
+diff --git "a/src/entities/birdpath.jl" "b/src/entities/birdpath.jl"
+index 092dbda..0e9bb87 100644
+--- "a/src/entities/birdpath.jl"
++++ "b/src/entities/birdpath.jl"
+@@ -3,7 +3,7 @@ module BirdPath
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Bird Path" => Ahorn.EntityPlacement(
++    "Farewell - Bird Path" => Ahorn.EntityPlacement(
+         Maple.BirdPath
+     ),
+ )
+diff --git "a/src/entities/blockfield.jl" "b/src/entities/blockfield.jl"
+index 56ec661..b622e03 100644
+--- "a/src/entities/blockfield.jl"
++++ "b/src/entities/blockfield.jl"
+@@ -3,7 +3,7 @@ module Blockfield
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Strawberry Blockfield" => Ahorn.EntityPlacement(
++    "All - Strawberry Blockfield" => Ahorn.EntityPlacement(
+         Maple.StrawberryBlockField,
+         "rectangle"
+     ),
+diff --git "a/src/entities/bonfire.jl" "b/src/entities/bonfire.jl"
+index 32e8303..9e32463 100644
+--- "a/src/entities/bonfire.jl"
++++ "b/src/entities/bonfire.jl"
+@@ -3,7 +3,7 @@ module Bonfire
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Bonfire" => Ahorn.EntityPlacement(
++    "All - Bonfire" => Ahorn.EntityPlacement(
+         Maple.Bonfire,
+         "point"
+     )
+diff --git "a/src/entities/booster.jl" "b/src/entities/booster.jl"
+index 41ed43e..c0a55d0 100644
+--- "a/src/entities/booster.jl"
++++ "b/src/entities/booster.jl"
+@@ -3,10 +3,10 @@ module Booster
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Booster (Green)" => Ahorn.EntityPlacement(
++    "Ridge - Booster (Green)" => Ahorn.EntityPlacement(
+         Maple.GreenBooster
+     ),
+-    "Booster (Red)" => Ahorn.EntityPlacement(
++    "Temple - Booster (Red)" => Ahorn.EntityPlacement(
+         Maple.RedBooster
+     )
+ )
+diff --git "a/src/entities/bounceblock.jl" "b/src/entities/bounceblock.jl"
+index 17e29c1..2f0b30e 100644
+--- "a/src/entities/bounceblock.jl"
++++ "b/src/entities/bounceblock.jl"
+@@ -3,7 +3,7 @@ module BounceBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Bounce Block" => Ahorn.EntityPlacement(
++    "Core - Bounce Block" => Ahorn.EntityPlacement(
+         Maple.BounceBlock,
+         "rectangle"
+     ),
+diff --git "a/src/entities/bridge.jl" "b/src/entities/bridge.jl"
+index af875ed..d4c164c 100644
+--- "a/src/entities/bridge.jl"
++++ "b/src/entities/bridge.jl"
+@@ -12,13 +12,13 @@ function bridgeFinalizer(entity::Maple.Bridge)
+ end
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Bridge" => Ahorn.EntityPlacement(
++    "Prologue - Bridge" => Ahorn.EntityPlacement(
+         Maple.Bridge,
+         "rectangle",
+         Dict{String, Any}(),
+         bridgeFinalizer
+     ),
+-    "Bridge (Fixed)" => Ahorn.EntityPlacement(
++    "Prologue - Bridge (Fixed)" => Ahorn.EntityPlacement(
+         Maple.BridgeFixed,
+         "rectangle"
+     )
+diff --git "a/src/entities/bumper.jl" "b/src/entities/bumper.jl"
+index c98531a..86aec29 100644
+--- "a/src/entities/bumper.jl"
++++ "b/src/entities/bumper.jl"
+@@ -3,7 +3,7 @@ module Bumper
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Bumper" => Ahorn.EntityPlacement(
++    "Reflection - Bumper" => Ahorn.EntityPlacement(
+         Maple.Bumper
+     )
+ )
+diff --git "a/src/entities/cassette.jl" "b/src/entities/cassette.jl"
+index 26cd0f8..e4636e5 100644
+--- "a/src/entities/cassette.jl"
++++ "b/src/entities/cassette.jl"
+@@ -3,7 +3,7 @@ module Cassette
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Cassette" => Ahorn.EntityPlacement(
++    "All - Cassette" => Ahorn.EntityPlacement(
+         Maple.Cassette,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/cassetteblock.jl" "b/src/entities/cassetteblock.jl"
+index e7ff91c..0e98031 100644
+--- "a/src/entities/cassetteblock.jl"
++++ "b/src/entities/cassetteblock.jl"
+@@ -10,7 +10,7 @@ const colorNames = Dict{String, Int}(
+ )
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Cassette Block ($index - $color)" => Ahorn.EntityPlacement(
++    "All - Cassette Block ($index - $color)" => Ahorn.EntityPlacement(
+         Maple.CassetteBlock,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/cliffsideflag.jl" "b/src/entities/cliffsideflag.jl"
+index 68ffd89..f9f4b79 100644
+--- "a/src/entities/cliffsideflag.jl"
++++ "b/src/entities/cliffsideflag.jl"
+@@ -5,7 +5,7 @@ using ..Ahorn, Maple
+ validFlagIndicdes = collect(0:10)
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Cliffside Big Flag" => Ahorn.EntityPlacement(
++    "Ridge - Cliffside Big Flag" => Ahorn.EntityPlacement(
+         Maple.CliffsideFlag,
+     )
+ )
+diff --git "a/src/entities/clouds.jl" "b/src/entities/clouds.jl"
+index e132855..4117e97 100644
+--- "a/src/entities/clouds.jl"
++++ "b/src/entities/clouds.jl"
+@@ -3,7 +3,7 @@ module Clouds
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Cloud (Normal)" => Ahorn.EntityPlacement(
++    "Ridge - Cloud (Normal)" => Ahorn.EntityPlacement(
+         Maple.Cloud,
+         "point",
+         Dict{String, Any}(
+@@ -11,7 +11,7 @@ const placements = Ahorn.PlacementDict(
+             "small" => false
+         )
+     ),
+-    "Cloud (Fragile)" => Ahorn.EntityPlacement(
++    "Ridge - Cloud (Fragile)" => Ahorn.EntityPlacement(
+         Maple.Cloud,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/clutter.jl" "b/src/entities/clutter.jl"
+index a102cee..d96b48f 100644
+--- "a/src/entities/clutter.jl"
++++ "b/src/entities/clutter.jl"
+@@ -26,18 +26,18 @@ const clutterBlockUnion = Union{
+ }
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Clutter Cabinet" => Ahorn.EntityPlacement(
++    "Resort - Clutter Cabinet" => Ahorn.EntityPlacement(
+         Maple.ClutterCabinet
+     ),
+ )
+ 
+ for (raw, name) in clutterDisplayNames
+-    placements["Clutter Block ($name)"] = Ahorn.EntityPlacement(
++    placements["Resort - Clutter Block ($name)"] = Ahorn.EntityPlacement(
+         clutterFunctions[raw],
+         "rectangle"
+     )
+ 
+-    placements["Clutter Switch ($name)"] = Ahorn.EntityPlacement(
++    placements["Resort - Clutter Switch ($name)"] = Ahorn.EntityPlacement(
+         Maple.ColorSwitch,
+         "point",
+         Dict{String, Any}(
+@@ -45,7 +45,7 @@ for (raw, name) in clutterDisplayNames
+         )
+     )
+ 
+-    placements["Clutter Door ($name)"] = Ahorn.EntityPlacement(
++    placements["Resort - Clutter Door ($name)"] = Ahorn.EntityPlacement(
+         Maple.ClutterDoor,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/cobweb.jl" "b/src/entities/cobweb.jl"
+index 1326df1..a7e09e9 100644
+--- "a/src/entities/cobweb.jl"
++++ "b/src/entities/cobweb.jl"
+@@ -3,7 +3,7 @@ module Cobweb
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Cobweb" => Ahorn.EntityPlacement(
++    "All - Cobweb" => Ahorn.EntityPlacement(
+         Maple.Cobweb,
+         "line"
+     )
+diff --git "a/src/entities/conditionblock.jl" "b/src/entities/conditionblock.jl"
+index f93f26a..958460c 100644
+--- "a/src/entities/conditionblock.jl"
++++ "b/src/entities/conditionblock.jl"
+@@ -3,7 +3,7 @@ module ConditionBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Condition Block" => Ahorn.EntityPlacement(
++    "All - Condition Block" => Ahorn.EntityPlacement(
+         Maple.ConditionBlock,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/coremessage.jl" "b/src/entities/coremessage.jl"
+index 7e7bd8c..5b09ad5 100644
+--- "a/src/entities/coremessage.jl"
++++ "b/src/entities/coremessage.jl"
+@@ -4,7 +4,7 @@ using ..Ahorn, Maple
+ 
+ # Render both vanilla and everest Core Messages, but only allow placement of Everest version as it allows custom dialog
+ const placements = Ahorn.PlacementDict(
+-    "Core Message (Everest)" => Ahorn.EntityPlacement(
++    "Core - Core Message (Everest)" => Ahorn.EntityPlacement(
+         Maple.EverestCoreMessage
+     )
+ )
+diff --git "a/src/entities/coretoggle.jl" "b/src/entities/coretoggle.jl"
+index 5ca9d72..eca6742 100644
+--- "a/src/entities/coretoggle.jl"
++++ "b/src/entities/coretoggle.jl"
+@@ -3,21 +3,21 @@ module CoreToggle
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Core Mode Toggle (Fire)" => Ahorn.EntityPlacement(
++    "Core - Core Mode Toggle (Fire)" => Ahorn.EntityPlacement(
+         Maple.CoreFlag,
+         "point",
+         Dict{String, Any}(
+             "onlyFire" => true
+         )
+     ),
+-    "Core Mode Toggle (Ice)" => Ahorn.EntityPlacement(
++    "Core - Core Mode Toggle (Ice)" => Ahorn.EntityPlacement(
+         Maple.CoreFlag,
+         "point",
+         Dict{String, Any}(
+             "onlyIce" => true
+         )
+     ),
+-    "Core Mode Toggle (Both)" => Ahorn.EntityPlacement(
++    "Core - Core Mode Toggle (Both)" => Ahorn.EntityPlacement(
+         Maple.CoreFlag
+     ),
+ )
+diff --git "a/src/entities/coverupwall.jl" "b/src/entities/coverupwall.jl"
+index fc6fe2f..049b60c 100644
+--- "a/src/entities/coverupwall.jl"
++++ "b/src/entities/coverupwall.jl"
+@@ -3,7 +3,7 @@ module CoverupWall
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Coverup Wall" => Ahorn.EntityPlacement(
++    "All - Coverup Wall" => Ahorn.EntityPlacement(
+         Maple.CoverupWall,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/crumbleblock.jl" "b/src/entities/crumbleblock.jl"
+index ebd79a6..9270480 100644
+--- "a/src/entities/crumbleblock.jl"
++++ "b/src/entities/crumbleblock.jl"
+@@ -3,7 +3,7 @@ module CrumbleBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Crumble Blocks ($(uppercasefirst(texture)))" => Ahorn.EntityPlacement(
++    "All - Crumble Blocks ($(uppercasefirst(texture)))" => Ahorn.EntityPlacement(
+         Maple.CrumbleBlock,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/crumblewallonrumble.jl" "b/src/entities/crumblewallonrumble.jl"
+index fd0565e..906b55d 100644
+--- "a/src/entities/crumblewallonrumble.jl"
++++ "b/src/entities/crumblewallonrumble.jl"
+@@ -3,7 +3,7 @@ module CrumbleWallOnRumble
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Crumble Wall on Rumble" => Ahorn.EntityPlacement(
++    "Farewell - Crumble Wall on Rumble" => Ahorn.EntityPlacement(
+         Maple.CrumbleWallOnRumble,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/cutscenenode.jl" "b/src/entities/cutscenenode.jl"
+index 7aa7bb9..c21eaea 100644
+--- "a/src/entities/cutscenenode.jl"
++++ "b/src/entities/cutscenenode.jl"
+@@ -3,7 +3,7 @@ module CutsceneNode
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Cutscene Node" => Ahorn.EntityPlacement(
++    "All - Cutscene Node" => Ahorn.EntityPlacement(
+         Maple.CutsceneNode
+     )
+ )
+diff --git "a/src/entities/darkchaser.jl" "b/src/entities/darkchaser.jl"
+index 50f0c3e..d30f393 100644
+--- "a/src/entities/darkchaser.jl"
++++ "b/src/entities/darkchaser.jl"
+@@ -3,11 +3,11 @@ module DarkChaser
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Badeline Chaser" => Ahorn.EntityPlacement(
++    "OldSite - Badeline Chaser" => Ahorn.EntityPlacement(
+         Maple.DarkChaser
+     ),
+ 
+-    "Badeline Chaser Barrier" => Ahorn.EntityPlacement(
++    "OldSite - Badeline Chaser Barrier" => Ahorn.EntityPlacement(
+         Maple.DarkChaserEnd,
+         "rectangle"
+     ),
+diff --git "a/src/entities/dashblock.jl" "b/src/entities/dashblock.jl"
+index 1ca6baa..14325f2 100644
+--- "a/src/entities/dashblock.jl"
++++ "b/src/entities/dashblock.jl"
+@@ -3,7 +3,7 @@ module DashBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Dash Block" => Ahorn.EntityPlacement(
++    "All - Dash Block" => Ahorn.EntityPlacement(
+         Maple.DashBlock,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/dashswitch.jl" "b/src/entities/dashswitch.jl"
+index 05e1074..32e4296 100644
+--- "a/src/entities/dashswitch.jl"
++++ "b/src/entities/dashswitch.jl"
+@@ -20,7 +20,7 @@ const clockwiseDirections = String["up", "right", "down", "left"]
+ 
+ for (name, texture) in textures
+     for (dir, data) in directions
+-        key = "Dash Switch ($(uppercasefirst(dir)), $(name))"
++        key = "Temple - Dash Switch ($(uppercasefirst(dir)), $(name))"
+         func, datakey, val = data
+         placements[key] = Ahorn.EntityPlacement(
+             func,
+diff --git "a/src/entities/door.jl" "b/src/entities/door.jl"
+index 039df43..25917cd 100644
+--- "a/src/entities/door.jl"
++++ "b/src/entities/door.jl"
+@@ -4,7 +4,7 @@ using ..Ahorn, Maple
+ 
+ const textures = ["wood", "metal"]
+ const placements = Ahorn.PlacementDict(
+-    "Door ($(uppercasefirst(texture)))" => Ahorn.EntityPlacement(
++    "All - Door ($(uppercasefirst(texture)))" => Ahorn.EntityPlacement(
+         Maple.Door,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/dreammirror.jl" "b/src/entities/dreammirror.jl"
+index 1042b7c..4e83bc6 100644
+--- "a/src/entities/dreammirror.jl"
++++ "b/src/entities/dreammirror.jl"
+@@ -3,7 +3,7 @@ module DreamMirror
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Dream Mirror" => Ahorn.EntityPlacement(
++    "OldSite - Dream Mirror" => Ahorn.EntityPlacement(
+         Maple.DreamMirror
+     )
+ )
+diff --git "a/src/entities/everestcustombirdtutorial.jl" "b/src/entities/everestcustombirdtutorial.jl"
+index 2e367f5..d6e327c 100644
+--- "a/src/entities/everestcustombirdtutorial.jl"
++++ "b/src/entities/everestcustombirdtutorial.jl"
+@@ -3,7 +3,7 @@ module EverestCustomBirdTutorial
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Custom Bird Tutorial (Everest)" => Ahorn.EntityPlacement(
++    "Farewell - Custom Bird Tutorial (Everest)" => Ahorn.EntityPlacement(
+         Maple.EverestCustomBird
+     )
+ )
+diff --git "a/src/entities/everestnpc.jl" "b/src/entities/everestnpc.jl"
+index 585a163..436914c 100644
+--- "a/src/entities/everestnpc.jl"
++++ "b/src/entities/everestnpc.jl"
+@@ -3,7 +3,7 @@ module EverestCustomNPC
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Custom NPC (Everest)" => Ahorn.EntityPlacement(
++    "All - Custom NPC (Everest)" => Ahorn.EntityPlacement(
+         Maple.EverestCustomNPC
+     )
+ )
+diff --git "a/src/entities/exitblock.jl" "b/src/entities/exitblock.jl"
+index 70f5dea..c46d4a6 100644
+--- "a/src/entities/exitblock.jl"
++++ "b/src/entities/exitblock.jl"
+@@ -3,7 +3,7 @@ module ExitBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Exit Block" => Ahorn.EntityPlacement(
++    "All - Exit Block" => Ahorn.EntityPlacement(
+         Maple.ExitBlock,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/fakeblock.jl" "b/src/entities/fakeblock.jl"
+index afd352c..6ff842b 100644
+--- "a/src/entities/fakeblock.jl"
++++ "b/src/entities/fakeblock.jl"
+@@ -3,7 +3,7 @@ module FakeBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Fake Block" => Ahorn.EntityPlacement(
++    "All - Fake Block" => Ahorn.EntityPlacement(
+         Maple.FakeBlock,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/fakewall.jl" "b/src/entities/fakewall.jl"
+index ec3ceb7..ca2b2ed 100644
+--- "a/src/entities/fakewall.jl"
++++ "b/src/entities/fakewall.jl"
+@@ -3,7 +3,7 @@ module FakeWall
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Fake Wall" => Ahorn.EntityPlacement(
++    "All - Fake Wall" => Ahorn.EntityPlacement(
+         Maple.FakeWall,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/fallingblock.jl" "b/src/entities/fallingblock.jl"
+index 964e9f8..6b1d09e 100644
+--- "a/src/entities/fallingblock.jl"
++++ "b/src/entities/fallingblock.jl"
+@@ -3,7 +3,7 @@ module FallingBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Falling Block" => Ahorn.EntityPlacement(
++    "All - Falling Block" => Ahorn.EntityPlacement(
+         Maple.FallingBlock,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/feather.jl" "b/src/entities/feather.jl"
+index 0fa7dbc..f070662 100644
+--- "a/src/entities/feather.jl"
++++ "b/src/entities/feather.jl"
+@@ -3,10 +3,10 @@ module Feather
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Feather" => Ahorn.EntityPlacement(
++    "Reflection - Feather" => Ahorn.EntityPlacement(
+         Maple.Feather
+     ),
+-    "Feather (Shielded)" => Ahorn.EntityPlacement(
++    "Reflection - Feather (Shielded)" => Ahorn.EntityPlacement(
+         Maple.Feather,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/fireball.jl" "b/src/entities/fireball.jl"
+index ef74d7f..0fdbe21 100644
+--- "a/src/entities/fireball.jl"
++++ "b/src/entities/fireball.jl"
+@@ -10,7 +10,7 @@ function fireballFinalizer(entity::Maple.FireBall)
+ end
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Fireball" => Ahorn.EntityPlacement(
++    "Core - Fireball" => Ahorn.EntityPlacement(
+         Maple.FireBall,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/firebarrier.jl" "b/src/entities/firebarrier.jl"
+index ecc0d7a..5450c77 100644
+--- "a/src/entities/firebarrier.jl"
++++ "b/src/entities/firebarrier.jl"
+@@ -3,7 +3,7 @@ module FireBarrier
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Fire Barrier" => Ahorn.EntityPlacement(
++    "Core - Fire Barrier" => Ahorn.EntityPlacement(
+         Maple.FireBarrier,
+         "rectangle"
+     ),
+diff --git "a/src/entities/flagline.jl" "b/src/entities/flagline.jl"
+index 7fbd34e..b0f2f3f 100644
+--- "a/src/entities/flagline.jl"
++++ "b/src/entities/flagline.jl"
+@@ -4,11 +4,11 @@ using ..Ahorn, Maple
+ using Random
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Clothes Line" => Ahorn.EntityPlacement(
++    "Resort - Clothes Line" => Ahorn.EntityPlacement(
+         Maple.ClothesLine,
+         "line"
+     ),
+-    "Cliffside Flags" => Ahorn.EntityPlacement(
++    "Ridge - Cliffside Flags" => Ahorn.EntityPlacement(
+         Maple.CliffFlags,
+         "line"
+     ),
+diff --git "a/src/entities/flingbird.jl" "b/src/entities/flingbird.jl"
+index 1c88efe..617d691 100644
+--- "a/src/entities/flingbird.jl"
++++ "b/src/entities/flingbird.jl"
+@@ -3,7 +3,7 @@ module FlingBird
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Fling Bird" => Ahorn.EntityPlacement(
++    "Farewell - Fling Bird" => Ahorn.EntityPlacement(
+         Maple.FlingBird
+     ),
+ )
+diff --git "a/src/entities/flingbirdintro.jl" "b/src/entities/flingbirdintro.jl"
+index 55b4c73..0994e7d 100644
+--- "a/src/entities/flingbirdintro.jl"
++++ "b/src/entities/flingbirdintro.jl"
+@@ -3,7 +3,7 @@ module FlingBirdIntro
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Fling Bird Intro" => Ahorn.EntityPlacement(
++    "Farewell - Fling Bird Intro" => Ahorn.EntityPlacement(
+         Maple.FlingBirdIntro
+     ),
+ )
+diff --git "a/src/entities/floatingdebris.jl" "b/src/entities/floatingdebris.jl"
+index fd31d67..b012f5c 100644
+--- "a/src/entities/floatingdebris.jl"
++++ "b/src/entities/floatingdebris.jl"
+@@ -4,7 +4,7 @@ using ..Ahorn, Maple
+ using Random
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Floating Debris" => Ahorn.EntityPlacement(
++    "OldSite - Floating Debris" => Ahorn.EntityPlacement(
+         Maple.FloatingDebris
+     )
+ )
+diff --git "a/src/entities/floatyspaceblock.jl" "b/src/entities/floatyspaceblock.jl"
+index 7e7368a..1c4bc1e 100644
+--- "a/src/entities/floatyspaceblock.jl"
++++ "b/src/entities/floatyspaceblock.jl"
+@@ -3,7 +3,7 @@ module FloatySpaceBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Floaty Space Block" => Ahorn.EntityPlacement(
++    "Farewell - Floaty Space Block" => Ahorn.EntityPlacement(
+         Maple.FloatySpaceBlock,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/flutterbird.jl" "b/src/entities/flutterbird.jl"
+index e68107a..8f5cdf1 100644
+--- "a/src/entities/flutterbird.jl"
++++ "b/src/entities/flutterbird.jl"
+@@ -3,7 +3,7 @@ module FlutterBird
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Flutterbird" => Ahorn.EntityPlacement(
++    "All - Flutterbird" => Ahorn.EntityPlacement(
+         Maple.Flutterbird
+     ),
+ )
+diff --git "a/src/entities/foregrounddebris.jl" "b/src/entities/foregrounddebris.jl"
+index bbaec39..3837223 100644
+--- "a/src/entities/foregrounddebris.jl"
++++ "b/src/entities/foregrounddebris.jl"
+@@ -4,7 +4,7 @@ using ..Ahorn, Maple
+ using Random
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Foreground Debris" => Ahorn.EntityPlacement(
++    "OldSite - Foreground Debris" => Ahorn.EntityPlacement(
+         Maple.ForegroundDebris
+     )
+ )
+diff --git "a/src/entities/forsakencitesatellite.jl" "b/src/entities/forsakencitesatellite.jl"
+index 662129f..a1a9b82 100644
+--- "a/src/entities/forsakencitesatellite.jl"
++++ "b/src/entities/forsakencitesatellite.jl"
+@@ -12,7 +12,7 @@ function satelliteFinalizer(entity::Maple.ForsakenCitySatellite)
+ end
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Forsaken City Satellite" => Ahorn.EntityPlacement(
++    "City - Forsaken City Satellite" => Ahorn.EntityPlacement(
+         Maple.ForsakenCitySatellite,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/glassblock.jl" "b/src/entities/glassblock.jl"
+index 450ea60..550d9f9 100644
+--- "a/src/entities/glassblock.jl"
++++ "b/src/entities/glassblock.jl"
+@@ -3,7 +3,7 @@ module GlassBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Glass Block" => Ahorn.EntityPlacement(
++    "Farewell - Glass Block" => Ahorn.EntityPlacement(
+         Maple.GlassBlock,
+         "rectangle"
+     ),
+diff --git "a/src/entities/goldenblock.jl" "b/src/entities/goldenblock.jl"
+index 12cef98..64e3f60 100644
+--- "a/src/entities/goldenblock.jl"
++++ "b/src/entities/goldenblock.jl"
+@@ -3,7 +3,7 @@ module GoldenBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Golden Block" => Ahorn.EntityPlacement(
++    "Farewell - Golden Block" => Ahorn.EntityPlacement(
+         Maple.GoldenBlock,
+         "rectangle"
+     ),
+diff --git "a/src/entities/gondola.jl" "b/src/entities/gondola.jl"
+index 96551f6..31c8d2c 100644
+--- "a/src/entities/gondola.jl"
++++ "b/src/entities/gondola.jl"
+@@ -3,7 +3,7 @@ module Gondola
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Gondola" => Ahorn.EntityPlacement(
++    "Ridge - Gondola" => Ahorn.EntityPlacement(
+         Maple.Gondola,
+         "line",
+     )
+diff --git "a/src/entities/hahaha.jl" "b/src/entities/hahaha.jl"
+index 4b08302..30d8d3d 100644
+--- "a/src/entities/hahaha.jl"
++++ "b/src/entities/hahaha.jl"
+@@ -3,7 +3,7 @@ module Hahaha
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Hahaha" => Ahorn.EntityPlacement(
++    "Prologue - Hahaha" => Ahorn.EntityPlacement(
+         Maple.Hahaha,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/hangingLamp.jl" "b/src/entities/hangingLamp.jl"
+index 7aaccb4..5161d54 100644
+--- "a/src/entities/hangingLamp.jl"
++++ "b/src/entities/hangingLamp.jl"
+@@ -12,7 +12,7 @@ function hangingLampFinalizer(entity::Maple.HangingLamp)
+ end
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Hanging Lamp" => Ahorn.EntityPlacement(
++    "All - Hanging Lamp" => Ahorn.EntityPlacement(
+         Maple.HangingLamp,
+         "line",
+         Dict{String, Any}(),
+diff --git "a/src/entities/heart.jl" "b/src/entities/heart.jl"
+index 0be82c1..18c76fd 100644
+--- "a/src/entities/heart.jl"
++++ "b/src/entities/heart.jl"
+@@ -3,15 +3,15 @@ module Heart
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Crystal Heart" => Ahorn.EntityPlacement(
++    "All - Crystal Heart" => Ahorn.EntityPlacement(
+         Maple.CrystalHeart
+     ),
+ 
+-    "Crystal Heart (Dream)" => Ahorn.EntityPlacement(
++    "Farewell - Crystal Heart (Dream)" => Ahorn.EntityPlacement(
+         Maple.DreamCrystalHeart
+     ),
+ 
+-    "Crystal Heart (Fake)" => Ahorn.EntityPlacement(
++    "Farewell - Crystal Heart (Fake)" => Ahorn.EntityPlacement(
+         Maple.FakeCrystalHeart
+     ),
+ )
+diff --git "a/src/entities/heartdoor.jl" "b/src/entities/heartdoor.jl"
+index 64e886c..3991d51 100644
+--- "a/src/entities/heartdoor.jl"
++++ "b/src/entities/heartdoor.jl"
+@@ -3,7 +3,7 @@ module HeartDoor
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Heart Door" => Ahorn.EntityPlacement(
++    "Core - Heart Door" => Ahorn.EntityPlacement(
+         Maple.HeartDoor,
+         "rectangle"
+     )
+diff --git "a/src/entities/iceblock.jl" "b/src/entities/iceblock.jl"
+index 0691586..8b54d62 100644
+--- "a/src/entities/iceblock.jl"
++++ "b/src/entities/iceblock.jl"
+@@ -3,7 +3,7 @@ module IceBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Ice Block" => Ahorn.EntityPlacement(
++    "Core - Ice Block" => Ahorn.EntityPlacement(
+         Maple.IceBlock,
+         "rectangle"
+     ),
+diff --git "a/src/entities/internetcafe.jl" "b/src/entities/internetcafe.jl"
+index ae1ad79..3a59786 100644
+--- "a/src/entities/internetcafe.jl"
++++ "b/src/entities/internetcafe.jl"
+@@ -3,7 +3,7 @@ module InternetCafe
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Internet Café" => Ahorn.EntityPlacement(
++    "Farewell - Internet Cafe" => Ahorn.EntityPlacement(
+         Maple.InternetCafe
+     )
+ )
+diff --git "a/src/entities/introcar.jl" "b/src/entities/introcar.jl"
+index c138eab..53fc215 100644
+--- "a/src/entities/introcar.jl"
++++ "b/src/entities/introcar.jl"
+@@ -3,7 +3,7 @@ module IntroCar
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Intro Car" => Ahorn.EntityPlacement(
++    "Prologue - Intro Car" => Ahorn.EntityPlacement(
+         Maple.IntroCar
+     )
+ )
+diff --git "a/src/entities/introcrusher.jl" "b/src/entities/introcrusher.jl"
+index 3850d98..b865fbe 100644
+--- "a/src/entities/introcrusher.jl"
++++ "b/src/entities/introcrusher.jl"
+@@ -3,7 +3,7 @@ module IntroCrusher
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Intro Crusher" => Ahorn.EntityPlacement(
++    "Prologue - Intro Crusher" => Ahorn.EntityPlacement(
+         Maple.IntroCrusher,
+         "rectangle",
+         Dict{String, Any}(),
+diff --git "a/src/entities/invisiblebarrier.jl" "b/src/entities/invisiblebarrier.jl"
+index 7e28cff..117c046 100644
+--- "a/src/entities/invisiblebarrier.jl"
++++ "b/src/entities/invisiblebarrier.jl"
+@@ -3,7 +3,7 @@ module InvisibleBarrier
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Invisible Barrier" => Ahorn.EntityPlacement(
++    "All - Invisible Barrier" => Ahorn.EntityPlacement(
+         Maple.Barrier,
+         "rectangle"
+     ),
+diff --git "a/src/entities/jellyfish.jl" "b/src/entities/jellyfish.jl"
+index 0dd7cb3..ac3a744 100644
+--- "a/src/entities/jellyfish.jl"
++++ "b/src/entities/jellyfish.jl"
+@@ -3,10 +3,10 @@ module Jellyfish
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Jellyfish" => Ahorn.EntityPlacement(
++    "Farewell - Jellyfish" => Ahorn.EntityPlacement(
+         Maple.Jellyfish
+     ),
+-    "Jellyfish (Floating)" => Ahorn.EntityPlacement(
++    "Farewell - Jellyfish (Floating)" => Ahorn.EntityPlacement(
+         Maple.Jellyfish,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/jumpthru.jl" "b/src/entities/jumpthru.jl"
+index a0520b7..93bf32b 100644
+--- "a/src/entities/jumpthru.jl"
++++ "b/src/entities/jumpthru.jl"
+@@ -4,7 +4,7 @@ using ..Ahorn, Maple
+ 
+ const textures = ["wood", "dream", "temple", "templeB", "cliffside", "reflection", "core", "moon"]
+ const placements = Ahorn.PlacementDict(
+-    "Jump Through ($(uppercasefirst(texture)))" => Ahorn.EntityPlacement(
++    "All - Jump Through ($(uppercasefirst(texture)))" => Ahorn.EntityPlacement(
+         Maple.JumpThru,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/kevin.jl" "b/src/entities/kevin.jl"
+index 9018699..b71d4ed 100644
+--- "a/src/entities/kevin.jl"
++++ "b/src/entities/kevin.jl"
+@@ -3,18 +3,18 @@ module Kevin
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Kevin (Both)" => Ahorn.EntityPlacement(
++    "Reflection - Kevin (Both)" => Ahorn.EntityPlacement(
+         Maple.CrushBlock,
+         "rectangle"
+     ),
+-    "Kevin (Vertical)" => Ahorn.EntityPlacement(
++    "Reflection - Kevin (Vertical)" => Ahorn.EntityPlacement(
+         Maple.CrushBlock,
+         "rectangle",
+         Dict{String, Any}(
+             "axes" => "vertical"
+         )
+     ),
+-    "Kevin (Horizontal)" => Ahorn.EntityPlacement(
++    "Reflection - Kevin (Horizontal)" => Ahorn.EntityPlacement(
+         Maple.CrushBlock,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/kevinspc.jl" "b/src/entities/kevinspc.jl"
+index c310f3e..c7837c3 100644
+--- "a/src/entities/kevinspc.jl"
++++ "b/src/entities/kevinspc.jl"
+@@ -3,7 +3,7 @@ module KevinsPC
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Kevin's PC" => Ahorn.EntityPlacement(
++    "Farewell - Kevin's PC" => Ahorn.EntityPlacement(
+         Maple.KevinsPC
+     )
+ )
+diff --git "a/src/entities/key.jl" "b/src/entities/key.jl"
+index 3eff770..040f8c4 100644
+--- "a/src/entities/key.jl"
++++ "b/src/entities/key.jl"
+@@ -3,10 +3,10 @@ module Key
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Key" => Ahorn.EntityPlacement(
++    "All - Key" => Ahorn.EntityPlacement(
+         Maple.Key
+     ),
+-    "Key (With Return)" => Ahorn.EntityPlacement(
++    "Farewell - Key (With Return)" => Ahorn.EntityPlacement(
+         Maple.Key,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/killbox.jl" "b/src/entities/killbox.jl"
+index debfa9e..3e3fee5 100644
+--- "a/src/entities/killbox.jl"
++++ "b/src/entities/killbox.jl"
+@@ -3,7 +3,7 @@ module Killbox
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Killbox" => Ahorn.EntityPlacement(
++    "All - Killbox" => Ahorn.EntityPlacement(
+         Maple.Killbox,
+         "rectangle"
+     ),
+diff --git "a/src/entities/lamp.jl" "b/src/entities/lamp.jl"
+index 0aeef98..ead2ec6 100644
+--- "a/src/entities/lamp.jl"
++++ "b/src/entities/lamp.jl"
+@@ -3,10 +3,10 @@ module Lamp
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Lamp" => Ahorn.EntityPlacement(
++    "All - Lamp" => Ahorn.EntityPlacement(
+         Maple.Lamp
+     ),
+-    "Lamp (Broken)" => Ahorn.EntityPlacement(
++    "All - Lamp (Broken)" => Ahorn.EntityPlacement(
+         Maple.BrokenLamp
+     ), 
+ )
+diff --git "a/src/entities/lightbeam.jl" "b/src/entities/lightbeam.jl"
+index eb893fc..c3915c7 100644
+--- "a/src/entities/lightbeam.jl"
++++ "b/src/entities/lightbeam.jl"
+@@ -15,7 +15,7 @@ function lightbeamFinalizer(entity::Maple.Lightbeam)
+ end
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Lightbeam" => Ahorn.EntityPlacement(
++    "All - Lightbeam" => Ahorn.EntityPlacement(
+         Maple.Lightbeam,
+         "line",
+         Dict{String, Any}(),
+diff --git "a/src/entities/lightning.jl" "b/src/entities/lightning.jl"
+index c3583a5..fbeb507 100644
+--- "a/src/entities/lightning.jl"
++++ "b/src/entities/lightning.jl"
+@@ -3,7 +3,7 @@ module Lightning
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Lightning" => Ahorn.EntityPlacement(
++    "Farewell - Lightning" => Ahorn.EntityPlacement(
+         Maple.Lightning,
+         "rectangle"
+     )
+diff --git "a/src/entities/lightningbreakerbox.jl" "b/src/entities/lightningbreakerbox.jl"
+index a91e1af..195d7be 100644
+--- "a/src/entities/lightningbreakerbox.jl"
++++ "b/src/entities/lightningbreakerbox.jl"
+@@ -3,7 +3,7 @@ module LightningBreakerBox
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Lightning Breaker Box" => Ahorn.EntityPlacement(
++    "Farewell - Lightning Breaker Box" => Ahorn.EntityPlacement(
+         Maple.LightningBreakerBox
+     )
+ )
+diff --git "a/src/entities/lockblock.jl" "b/src/entities/lockblock.jl"
+index f1d7209..58a42f7 100644
+--- "a/src/entities/lockblock.jl"
++++ "b/src/entities/lockblock.jl"
+@@ -10,7 +10,7 @@ const sprites = Dict{String, String}(
+ )
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Locked Door ($(Ahorn.humanizeVariableName(sprite)))" => Ahorn.EntityPlacement(
++    "All - Locked Door ($(Ahorn.humanizeVariableName(sprite)))" => Ahorn.EntityPlacement(
+         Maple.LockBlock,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/memorial.jl" "b/src/entities/memorial.jl"
+index 2493d32..64c2ca5 100644
+--- "a/src/entities/memorial.jl"
++++ "b/src/entities/memorial.jl"
+@@ -3,10 +3,10 @@ module Memorial
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Memorial" => Ahorn.EntityPlacement(
++    "OldSite - Memorial" => Ahorn.EntityPlacement(
+         Maple.Memorial
+     ),
+-    "Custom Memorial (Everest)" => Ahorn.EntityPlacement(
++    "OldSite - Custom Memorial (Everest)" => Ahorn.EntityPlacement(
+         Maple.EverestMemorial
+     )
+ )
+diff --git "a/src/entities/mooncreature.jl" "b/src/entities/mooncreature.jl"
+index 57d1c85..e9f1eed 100644
+--- "a/src/entities/mooncreature.jl"
++++ "b/src/entities/mooncreature.jl"
+@@ -3,7 +3,7 @@ module MoonCreature
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Moon Creature" => Ahorn.EntityPlacement(
++    "Farewell - Moon Creature" => Ahorn.EntityPlacement(
+         Maple.MoonCreature
+     )
+ )
+diff --git "a/src/entities/moveblock.jl" "b/src/entities/moveblock.jl"
+index f7af1ba..4fdc563 100644
+--- "a/src/entities/moveblock.jl"
++++ "b/src/entities/moveblock.jl"
+@@ -8,7 +8,7 @@ buttonColor = (71, 64, 112, 255) ./ 255
+ 
+ directions = Maple.move_block_directions
+ for direction in directions, steerable in false:true, fast in false:true
+-    key = "Move Block ($(uppercasefirst(direction)), $(fast ? "Fast" : "Slow")$(steerable ? ", Steerable" :    ""))"
++    key = "Ridge - Move Block ($(uppercasefirst(direction)), $(fast ? "Fast" : "Slow")$(steerable ? ", Steerable" :    ""))"
+     placements[key] = Ahorn.EntityPlacement(
+         Maple.MoveBlock,
+         "rectangle",
+diff --git "a/src/entities/negablock.jl" "b/src/entities/negablock.jl"
+index 7b79fee..43504f4 100644
+--- "a/src/entities/negablock.jl"
++++ "b/src/entities/negablock.jl"
+@@ -3,7 +3,7 @@ module NegaBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Nega Block" => Ahorn.EntityPlacement(
++    "Core - Nega Block" => Ahorn.EntityPlacement(
+         Maple.NegaBlock,
+         "rectangle"
+     ),
+diff --git "a/src/entities/npc.jl" "b/src/entities/npc.jl"
+index 540e9e5..6af869e 100644
+--- "a/src/entities/npc.jl"
++++ "b/src/entities/npc.jl"
+@@ -3,7 +3,7 @@ module NPC
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "NPC" => Ahorn.EntityPlacement(
++    "All - NPC" => Ahorn.EntityPlacement(
+         Maple.NPC
+     )
+ )
+diff --git "a/src/entities/oshiroboss.jl" "b/src/entities/oshiroboss.jl"
+index 8645c7a..a8979ce 100644
+--- "a/src/entities/oshiroboss.jl"
++++ "b/src/entities/oshiroboss.jl"
+@@ -3,7 +3,7 @@ module OshiroBoss
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Oshiro Boss" => Ahorn.EntityPlacement(
++    "Resort - Oshiro Boss" => Ahorn.EntityPlacement(
+         Maple.FriendlyGhost
+     )
+ )
+diff --git "a/src/entities/oshirodoor.jl" "b/src/entities/oshirodoor.jl"
+index 92f5e3c..9e3dc93 100644
+--- "a/src/entities/oshirodoor.jl"
++++ "b/src/entities/oshirodoor.jl"
+@@ -3,7 +3,7 @@ module OshiroDoor
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Oshiro Door" => Ahorn.EntityPlacement(
++    "Resort - Oshiro Door" => Ahorn.EntityPlacement(
+         Maple.OshiroDoor
+     )
+ )
+diff --git "a/src/entities/payphone.jl" "b/src/entities/payphone.jl"
+index f8b4763..7ca2b31 100644
+--- "a/src/entities/payphone.jl"
++++ "b/src/entities/payphone.jl"
+@@ -3,7 +3,7 @@ module Payphone
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Payphone" => Ahorn.EntityPlacement(
++    "OldSite - Payphone" => Ahorn.EntityPlacement(
+         Maple.Payphone
+     )
+ )
+diff --git "a/src/entities/picoconsole.jl" "b/src/entities/picoconsole.jl"
+index 107ad62..e0f283c 100644
+--- "a/src/entities/picoconsole.jl"
++++ "b/src/entities/picoconsole.jl"
+@@ -3,7 +3,7 @@ module PicoConsole
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Pico Console" => Ahorn.EntityPlacement(
++    "Resort - Pico Console" => Ahorn.EntityPlacement(
+         Maple.PicoConsole
+     )
+ )
+diff --git "a/src/entities/plateau.jl" "b/src/entities/plateau.jl"
+index ecaea61..4a827f5 100644
+--- "a/src/entities/plateau.jl"
++++ "b/src/entities/plateau.jl"
+@@ -3,7 +3,7 @@ module Plateau
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Plateau" => Ahorn.EntityPlacement(
++    "Ridge - Plateau" => Ahorn.EntityPlacement(
+         Maple.Plateau
+     )
+ )
+diff --git "a/src/entities/platform.jl" "b/src/entities/platform.jl"
+index 5fe5591..398b17b 100644
+--- "a/src/entities/platform.jl"
++++ "b/src/entities/platform.jl"
+@@ -5,7 +5,7 @@ using ..Ahorn, Maple
+ const placements = Ahorn.PlacementDict()
+ 
+ for texture in Maple.wood_platform_textures
+-    placements["Platform (Moving, $(uppercasefirst(texture)))"] = Ahorn.EntityPlacement(
++    placements["All - Platform (Moving, $(uppercasefirst(texture)))"] = Ahorn.EntityPlacement(
+         Maple.MovingPlatform,
+         "rectangle",
+         Dict{String, Any}(
+@@ -19,7 +19,7 @@ for texture in Maple.wood_platform_textures
+         end
+     )
+ 
+-    placements["Platform (Sinking, $(uppercasefirst(texture)))"] = Ahorn.EntityPlacement(
++    placements["All - Platform (Sinking, $(uppercasefirst(texture)))"] = Ahorn.EntityPlacement(
+         Maple.SinkingPlatform,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/playbackbillboard.jl" "b/src/entities/playbackbillboard.jl"
+index b8a7160..4bd4d38 100644
+--- "a/src/entities/playbackbillboard.jl"
++++ "b/src/entities/playbackbillboard.jl"
+@@ -3,7 +3,7 @@ module PlaybackBillboard
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Playback Billboard" => Ahorn.EntityPlacement(
++    "Farewell - Playback Billboard" => Ahorn.EntityPlacement(
+         Maple.PlaybackBillboard,
+         "rectangle"
+     ),
+diff --git "a/src/entities/player.jl" "b/src/entities/player.jl"
+index 9c9e2f7..26497e3 100644
+--- "a/src/entities/player.jl"
++++ "b/src/entities/player.jl"
+@@ -3,7 +3,7 @@ module Player
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Player (Spawn Point)" => Ahorn.EntityPlacement(
++    "All - Player (Spawn Point)" => Ahorn.EntityPlacement(
+         Maple.Player
+     )
+ )
+diff --git "a/src/entities/playerplayback.jl" "b/src/entities/playerplayback.jl"
+index fbcbeab..b95bd2d 100644
+--- "a/src/entities/playerplayback.jl"
++++ "b/src/entities/playerplayback.jl"
+@@ -9,7 +9,7 @@ const baseGameTutorials = String[
+ ]
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Ghost Player Playback" => Ahorn.EntityPlacement(
++    "Farewell - Ghost Player Playback" => Ahorn.EntityPlacement(
+         Maple.PlayerPlayback
+     )
+ )
+diff --git "a/src/entities/playerseeker.jl" "b/src/entities/playerseeker.jl"
+index db3af8b..47ac851 100644
+--- "a/src/entities/playerseeker.jl"
++++ "b/src/entities/playerseeker.jl"
+@@ -3,7 +3,7 @@ module PlayerSeeker
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Player Seeker" => Ahorn.EntityPlacement(
++    "Temple - Player Seeker" => Ahorn.EntityPlacement(
+         Maple.PlayerSeeker
+     )
+ )
+diff --git "a/src/entities/puffer.jl" "b/src/entities/puffer.jl"
+index 3410b84..39dc90c 100644
+--- "a/src/entities/puffer.jl"
++++ "b/src/entities/puffer.jl"
+@@ -3,14 +3,14 @@ module Puffer
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Puffer (Right)" => Ahorn.EntityPlacement(
++    "Farewell - Puffer (Right)" => Ahorn.EntityPlacement(
+         Maple.Puffer,
+         "point",
+         Dict{String, Any}(
+             "right" => true
+         )
+     ),
+-    "Puffer (Left)" => Ahorn.EntityPlacement(
++    "Farewell - Puffer (Left)" => Ahorn.EntityPlacement(
+         Maple.Puffer,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/refill.jl" "b/src/entities/refill.jl"
+index 11f82ff..e967447 100644
+--- "a/src/entities/refill.jl"
++++ "b/src/entities/refill.jl"
+@@ -3,11 +3,11 @@ module Refill
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Refill" => Ahorn.EntityPlacement(
++    "All - Refill" => Ahorn.EntityPlacement(
+         Maple.Refill
+     ),
+ 
+-    "Refill (Two Dashes)" => Ahorn.EntityPlacement(
++    "Farewell - Refill (Two Dashes)" => Ahorn.EntityPlacement(
+         Maple.Refill,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/reflectionheartstatue.jl" "b/src/entities/reflectionheartstatue.jl"
+index b41e88b..3436915 100644
+--- "a/src/entities/reflectionheartstatue.jl"
++++ "b/src/entities/reflectionheartstatue.jl"
+@@ -15,7 +15,7 @@ function statueFinalizer(entity::Maple.ReflectionHeartStatue)
+ end
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Reflection Heart Statue" => Ahorn.EntityPlacement(
++    "Reflection - Heart Statue" => Ahorn.EntityPlacement(
+         Maple.ReflectionHeartStatue,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/resortLantern.jl" "b/src/entities/resortLantern.jl"
+index 8ade61e..3f63dd3 100644
+--- "a/src/entities/resortLantern.jl"
++++ "b/src/entities/resortLantern.jl"
+@@ -3,7 +3,7 @@ module ResortLantern
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Resort Lantern" => Ahorn.EntityPlacement(
++    "Resort - Lantern" => Ahorn.EntityPlacement(
+         Maple.ResortLantern
+     )
+ )
+diff --git "a/src/entities/resortmirror.jl" "b/src/entities/resortmirror.jl"
+index a6d2aa2..c65e2a8 100644
+--- "a/src/entities/resortmirror.jl"
++++ "b/src/entities/resortmirror.jl"
+@@ -3,7 +3,7 @@ module ResortMirror
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Resort Mirror" => Ahorn.EntityPlacement(
++    "Resort - Mirror" => Ahorn.EntityPlacement(
+         Maple.ResortMirror
+     )
+ )
+diff --git "a/src/entities/resortroofending.jl" "b/src/entities/resortroofending.jl"
+index ef8b81a..2dc620b 100644
+--- "a/src/entities/resortroofending.jl"
++++ "b/src/entities/resortroofending.jl"
+@@ -3,7 +3,7 @@ module ResortRoofEnding
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Resort Roof Ending" => Ahorn.EntityPlacement(
++    "Resort - Roof Ending" => Ahorn.EntityPlacement(
+         Maple.ResortRoofEnding,
+         "rectangle"
+     )
+diff --git "a/src/entities/ridgegate.jl" "b/src/entities/ridgegate.jl"
+index 412e345..f6cde39 100644
+--- "a/src/entities/ridgegate.jl"
++++ "b/src/entities/ridgegate.jl"
+@@ -3,7 +3,7 @@ module RidgeGate
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Ridge Gate" => Ahorn.EntityPlacement(
++    "Ridge - Gate" => Ahorn.EntityPlacement(
+         Maple.RidgeGate,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/risinglava.jl" "b/src/entities/risinglava.jl"
+index 46a2963..e7d8e6c 100644
+--- "a/src/entities/risinglava.jl"
++++ "b/src/entities/risinglava.jl"
+@@ -3,7 +3,7 @@ module RisingLava
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Rising Lava" => Ahorn.EntityPlacement(
++    "Core - Rising Lava" => Ahorn.EntityPlacement(
+         Maple.RisingLava
+     )
+ )
+diff --git "a/src/entities/sandwichlava.jl" "b/src/entities/sandwichlava.jl"
+index f9f6ad3..c359056 100644
+--- "a/src/entities/sandwichlava.jl"
++++ "b/src/entities/sandwichlava.jl"
+@@ -3,7 +3,7 @@ module SandwichLava
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Sandwich Lava" => Ahorn.EntityPlacement(
++    "Core - Sandwich Lava" => Ahorn.EntityPlacement(
+         Maple.SandwichLava
+     )
+ )
+diff --git "a/src/entities/seeker.jl" "b/src/entities/seeker.jl"
+index 2ce1215..41447fc 100644
+--- "a/src/entities/seeker.jl"
++++ "b/src/entities/seeker.jl"
+@@ -3,7 +3,7 @@ module Seeker
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Seeker" => Ahorn.EntityPlacement(
++    "Temple - Seeker" => Ahorn.EntityPlacement(
+         Maple.Seeker,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/seekerbarrier.jl" "b/src/entities/seekerbarrier.jl"
+index 15cb064..b49f761 100644
+--- "a/src/entities/seekerbarrier.jl"
++++ "b/src/entities/seekerbarrier.jl"
+@@ -3,7 +3,7 @@ module SeekerBarrier
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Seeker Barrier" => Ahorn.EntityPlacement(
++    "Temple - Seeker Barrier" => Ahorn.EntityPlacement(
+         Maple.SeekerBarrier,
+         "rectangle"
+     ),
+diff --git "a/src/entities/seekerstatue.jl" "b/src/entities/seekerstatue.jl"
+index ebedec7..0cca5b7 100644
+--- "a/src/entities/seekerstatue.jl"
++++ "b/src/entities/seekerstatue.jl"
+@@ -3,7 +3,7 @@ module SeekerStatue
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Seeker Statue" => Ahorn.EntityPlacement(
++    "Temple - Seeker Statue" => Ahorn.EntityPlacement(
+         Maple.SeekerStatue,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/sliders.jl" "b/src/entities/sliders.jl"
+index 48f312f..1575289 100644
+--- "a/src/entities/sliders.jl"
++++ "b/src/entities/sliders.jl"
+@@ -3,7 +3,7 @@ module Slider
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Slider (Clockwise)" => Ahorn.EntityPlacement(
++    "All - Slider (Clockwise)" => Ahorn.EntityPlacement(
+         Maple.Slider,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/soundsource.jl" "b/src/entities/soundsource.jl"
+index e517d94..cd5fe4a 100644
+--- "a/src/entities/soundsource.jl"
++++ "b/src/entities/soundsource.jl"
+@@ -3,7 +3,7 @@ module SoundSource
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Sound Source" => Ahorn.EntityPlacement(
++    "All - Sound Source" => Ahorn.EntityPlacement(
+         Maple.SoundSource
+     )
+ )
+diff --git "a/src/entities/spacejam.jl" "b/src/entities/spacejam.jl"
+index 0179577..1d58973 100644
+--- "a/src/entities/spacejam.jl"
++++ "b/src/entities/spacejam.jl"
+@@ -3,7 +3,7 @@ module SpaceJam
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Space Jam" => Ahorn.EntityPlacement(
++    "OldSite - Space Jam" => Ahorn.EntityPlacement(
+         Maple.DreamBlock,
+         "rectangle"
+     )
+diff --git "a/src/entities/spikes.jl" "b/src/entities/spikes.jl"
+index 968ba50..b908602 100644
+--- "a/src/entities/spikes.jl"
++++ "b/src/entities/spikes.jl"
+@@ -38,7 +38,7 @@ const triggerSpikeColors = [
+ 
+ for variant in Maple.spike_types
+     for (dir, entity) in entities
+-        key = "Spikes ($(uppercasefirst(dir)), $(uppercasefirst(variant)))"
++        key = "All - Spikes ($(uppercasefirst(dir)), $(uppercasefirst(variant)))"
+         placements[key] = Ahorn.EntityPlacement(
+             entity,
+             "rectangle",
+@@ -50,7 +50,7 @@ for variant in Maple.spike_types
+ 
+     if variant != "tentacles"
+         for (dir, entity) in triggerEntitiesOrig
+-            key = "Trigger Spikes ($(uppercasefirst(dir)), $(uppercasefirst(variant)))"
++            key = "All - Trigger Spikes ($(uppercasefirst(dir)), $(uppercasefirst(variant)))"
+             placements[key] = Ahorn.EntityPlacement(
+                 entity,
+                 "rectangle",
+@@ -63,7 +63,7 @@ for variant in Maple.spike_types
+ end
+ 
+ for (dir, entity) in triggerEntities
+-    key = "Trigger Spikes ($(uppercasefirst(dir)), Dust)"
++    key = "All - Trigger Spikes ($(uppercasefirst(dir)), Dust)"
+     placements[key] = Ahorn.EntityPlacement(
+         entity,
+         "rectangle"
+diff --git "a/src/entities/spinner.jl" "b/src/entities/spinner.jl"
+index 63a633a..fa3835f 100644
+--- "a/src/entities/spinner.jl"
++++ "b/src/entities/spinner.jl"
+@@ -21,14 +21,14 @@ end
+ const movingSpinner = Union{Maple.TrackSpinner, Maple.RotateSpinner}
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Dust Sprite" => Ahorn.EntityPlacement(
++    "Resort - Dust Sprite" => Ahorn.EntityPlacement(
+         Maple.Spinner,
+         "point",
+         Dict{String, Any}(
+             "dust" => true
+         )
+     ),
+-    "Dust Sprite (Attached)" => Ahorn.EntityPlacement(
++    "Resort - Dust Sprite (Attached)" => Ahorn.EntityPlacement(
+         Maple.Spinner,
+         "point",
+         Dict{String, Any}(
+@@ -37,7 +37,7 @@ const placements = Ahorn.PlacementDict(
+         )
+     ),
+ 
+-    "Dust Sprite (Rotating, Clockwise)" => Ahorn.EntityPlacement(
++    "Resort - Dust Sprite (Rotating, Clockwise)" => Ahorn.EntityPlacement(
+         Maple.RotateSpinner,
+         "point",
+         Dict{String, Any}(
+@@ -46,7 +46,7 @@ const placements = Ahorn.PlacementDict(
+         ),
+         rotatingSpinnerFinalizer
+     ),
+-    "Dust Sprite (Rotating)" => Ahorn.EntityPlacement(
++    "Resort - Dust Sprite (Rotating)" => Ahorn.EntityPlacement(
+         Maple.RotateSpinner,
+         "point",
+         Dict{String, Any}(
+@@ -55,7 +55,7 @@ const placements = Ahorn.PlacementDict(
+         ),
+         rotatingSpinnerFinalizer
+     ),
+-    "Blade (Rotating, Clockwise)" => Ahorn.EntityPlacement(
++    "All - Blade (Rotating, Clockwise)" => Ahorn.EntityPlacement(
+         Maple.RotateSpinner,
+         "point",
+         Dict{String, Any}(
+@@ -64,7 +64,7 @@ const placements = Ahorn.PlacementDict(
+         ),
+         rotatingSpinnerFinalizer
+     ),
+-    "Blade (Rotating)" => Ahorn.EntityPlacement(
++    "All - Blade (Rotating)" => Ahorn.EntityPlacement(
+         Maple.RotateSpinner,
+         "point",
+         Dict{String, Any}(
+@@ -73,7 +73,7 @@ const placements = Ahorn.PlacementDict(
+         ),
+         rotatingSpinnerFinalizer
+     ),
+-    "Star (Rotating, Clockwise)" => Ahorn.EntityPlacement(
++    "Farewell - Star (Rotating, Clockwise)" => Ahorn.EntityPlacement(
+         Maple.RotateSpinner,
+         "point",
+         Dict{String, Any}(
+@@ -83,7 +83,7 @@ const placements = Ahorn.PlacementDict(
+         ),
+         rotatingSpinnerFinalizer
+     ),
+-    "Star (Rotating)" => Ahorn.EntityPlacement(
++    "Farewell - Star (Rotating)" => Ahorn.EntityPlacement(
+         Maple.RotateSpinner,
+         "point",
+         Dict{String, Any}(
+@@ -98,7 +98,7 @@ const placements = Ahorn.PlacementDict(
+ const crystalSpinnerColors = Maple.crystal_colors
+ for color in crystalSpinnerColors
+     for attached in false:true
+-        key = "Crystal Spinner ($(uppercasefirst(color))$(attached ? ", Attached" : ""))"
++        key = "All - Crystal Spinner ($(uppercasefirst(color))$(attached ? ", Attached" : ""))"
+         placements[key] = Ahorn.EntityPlacement(
+             Maple.Spinner,
+             "point",
+@@ -116,7 +116,7 @@ for speed in speeds, dusty in false:true, star in false:true
+         continue
+     end
+ 
+-    key = (star ? "Star" : (dusty ? "Dust Sprite" : "Blade")) * " (Track, $(uppercasefirst(speed)))"
++    key = (star ? "Farewell - Star" : (dusty ? "Resort - Dust Sprite" : "All - Blade")) * " (Track, $(uppercasefirst(speed)))"
+     placements[key] = Ahorn.EntityPlacement(
+         Maple.TrackSpinner,
+         "line",
+diff --git "a/src/entities/spring.jl" "b/src/entities/spring.jl"
+index f6e9a24..fa85be1 100644
+--- "a/src/entities/spring.jl"
++++ "b/src/entities/spring.jl"
+@@ -3,13 +3,13 @@ module Spring
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Spring (Up)" => Ahorn.EntityPlacement(
++    "All - Spring (Up)" => Ahorn.EntityPlacement(
+         Maple.Spring
+     ),
+-    "Spring (Left)" => Ahorn.EntityPlacement(
++    "All - Spring (Left)" => Ahorn.EntityPlacement(
+         Maple.SpringRight
+     ),
+-    "Spring (Right)" => Ahorn.EntityPlacement(
++    "All - Spring (Right)" => Ahorn.EntityPlacement(
+         Maple.SpringLeft
+     ),
+ )
+diff --git "a/src/entities/starjumpblock.jl" "b/src/entities/starjumpblock.jl"
+index 0c19f10..69683a5 100644
+--- "a/src/entities/starjumpblock.jl"
++++ "b/src/entities/starjumpblock.jl"
+@@ -3,14 +3,14 @@ module StarJumpBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Star Jump Block" => Ahorn.EntityPlacement(
++    "Reflection - Star Jump Block" => Ahorn.EntityPlacement(
+         Maple.StarJumpBlock,
+         "rectangle"
+     ),
+-    "Star Climb Controller" => Ahorn.EntityPlacement(
++    "Reflection - Star Climb Controller" => Ahorn.EntityPlacement(
+         Maple.StarClimbController,
+     ),
+-    "Star Climb Graphics Controller (Everest)" => Ahorn.EntityPlacement(
++    "Reflection - Star Climb Graphics Controller (Everest)" => Ahorn.EntityPlacement(
+         Maple.StarClimbGraphicsController,
+     ),
+ )
+diff --git "a/src/entities/strawberry.jl" "b/src/entities/strawberry.jl"
+index 87d97bb..52c93dd 100644
+--- "a/src/entities/strawberry.jl"
++++ "b/src/entities/strawberry.jl"
+@@ -3,13 +3,13 @@ module Strawberry
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Strawberry" => Ahorn.EntityPlacement(
++    "All - Strawberry" => Ahorn.EntityPlacement(
+         Maple.Strawberry
+     ),
+-    "Golden Strawberry" => Ahorn.EntityPlacement(
++    "All - Golden Strawberry" => Ahorn.EntityPlacement(
+         Maple.GoldenStrawberry
+     ),
+-    "Space Berry" => Ahorn.EntityPlacement(
++    "Farewell - Space Berry" => Ahorn.EntityPlacement(
+         Maple.Strawberry,
+         "point",
+         Dict{String, Any}(
+@@ -17,14 +17,14 @@ const placements = Ahorn.PlacementDict(
+         )
+     ),
+ 
+-    "Strawberry (Winged)" => Ahorn.EntityPlacement(
++    "All - Strawberry (Winged)" => Ahorn.EntityPlacement(
+         Maple.Strawberry,
+         "point",
+         Dict{String, Any}(
+             "winged" => true
+         )
+     ),
+-    "Golden Strawberry (Winged)" => Ahorn.EntityPlacement(
++    "All - Golden Strawberry (Winged)" => Ahorn.EntityPlacement(
+         Maple.GoldenStrawberry,
+         "point",
+         Dict{String, Any}(
+@@ -32,7 +32,7 @@ const placements = Ahorn.PlacementDict(
+         )
+     ),
+ 
+-    "Golden Strawberry (Winged, No Dash)" => Ahorn.EntityPlacement(
++    "All - Golden Strawberry (Winged, No Dash)" => Ahorn.EntityPlacement(
+         Maple.GoldenStrawberryNoDash,
+         "point",
+     ),
+diff --git "a/src/entities/summitbackgroundmanager.jl" "b/src/entities/summitbackgroundmanager.jl"
+index 8ddb661..c426e99 100644
+--- "a/src/entities/summitbackgroundmanager.jl"
++++ "b/src/entities/summitbackgroundmanager.jl"
+@@ -3,7 +3,7 @@ module SummitBackgroundManager
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Summit Background Manager" => Ahorn.EntityPlacement(
++    "Summit - Background Manager" => Ahorn.EntityPlacement(
+         Maple.SummitBackgroundManager
+     )
+ )
+diff --git "a/src/entities/summitcheckpoint.jl" "b/src/entities/summitcheckpoint.jl"
+index b05545d..09d7e33 100644
+--- "a/src/entities/summitcheckpoint.jl"
++++ "b/src/entities/summitcheckpoint.jl"
+@@ -3,7 +3,7 @@ module SummitCheckpoint
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Summit Checkpoint" => Ahorn.EntityPlacement(
++    "Summit - Checkpoint" => Ahorn.EntityPlacement(
+         Maple.Checkpoint
+     )
+ )
+diff --git "a/src/entities/summitcloud.jl" "b/src/entities/summitcloud.jl"
+index 7d3ac43..e20288a 100644
+--- "a/src/entities/summitcloud.jl"
++++ "b/src/entities/summitcloud.jl"
+@@ -3,7 +3,7 @@ module SummitCloud
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Summit Cloud" => Ahorn.EntityPlacement(
++    "Summit - Cloud" => Ahorn.EntityPlacement(
+         Maple.SummitCloud
+     )
+ )
+diff --git "a/src/entities/swapblock.jl" "b/src/entities/swapblock.jl"
+index 5c559cd..0f2e2af 100644
+--- "a/src/entities/swapblock.jl"
++++ "b/src/entities/swapblock.jl"
+@@ -12,7 +12,7 @@ function swapFinalizer(entity)
+ end
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Swap Block ($(uppercasefirst(theme)))" => Ahorn.EntityPlacement(
++    "All - Swap Block ($(uppercasefirst(theme)))" => Ahorn.EntityPlacement(
+         Maple.SwapBlock,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/switchgate.jl" "b/src/entities/switchgate.jl"
+index 42f285a..6e1f557 100644
+--- "a/src/entities/switchgate.jl"
++++ "b/src/entities/switchgate.jl"
+@@ -14,7 +14,7 @@ end
+ const textures = ["block", "mirror", "temple", "stars"]
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Switch Gate (Stone)" => Ahorn.EntityPlacement(
++    "All - Switch Gate (Stone)" => Ahorn.EntityPlacement(
+         Maple.SwitchGate,
+         "rectangle",
+         Dict{String, Any}(
+@@ -22,7 +22,7 @@ const placements = Ahorn.PlacementDict(
+         ),
+         gateFinalizer
+     ),
+-    "Switch Gate (Mirror)" => Ahorn.EntityPlacement(
++    "Temple - Switch Gate (Mirror)" => Ahorn.EntityPlacement(
+         Maple.SwitchGate,
+         "rectangle",
+         Dict{String, Any}(
+@@ -30,7 +30,7 @@ const placements = Ahorn.PlacementDict(
+         ),
+         gateFinalizer
+     ),
+-    "Switch Gate (Temple)" => Ahorn.EntityPlacement(
++    "Temple - Switch Gate (Temple)" => Ahorn.EntityPlacement(
+         Maple.SwitchGate,
+         "rectangle",
+         Dict{String, Any}(
+@@ -38,7 +38,7 @@ const placements = Ahorn.PlacementDict(
+         ),
+         gateFinalizer
+     ),
+-    "Switch Gate (Moon)" => Ahorn.EntityPlacement(
++    "Farewell - Switch Gate (Moon)" => Ahorn.EntityPlacement(
+         Maple.SwitchGate,
+         "rectangle",
+         Dict{String, Any}(
+@@ -47,7 +47,7 @@ const placements = Ahorn.PlacementDict(
+         gateFinalizer
+     ),
+ 
+-    "Touch Switch" => Ahorn.EntityPlacement(
++    "All - Touch Switch" => Ahorn.EntityPlacement(
+         Maple.TouchSwitch
+     )
+ )
+diff --git "a/src/entities/templebigeyeball.jl" "b/src/entities/templebigeyeball.jl"
+index 96b5dd1..3482c3c 100644
+--- "a/src/entities/templebigeyeball.jl"
++++ "b/src/entities/templebigeyeball.jl"
+@@ -3,7 +3,7 @@ module TempleBigEyeball
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Temple Big Eyeball" => Ahorn.EntityPlacement(
++    "Temple - Big Eyeball" => Ahorn.EntityPlacement(
+         Maple.TempleBigEyeball
+     )
+ )
+diff --git "a/src/entities/templecrackedblock.jl" "b/src/entities/templecrackedblock.jl"
+index 57283af..55e7896 100644
+--- "a/src/entities/templecrackedblock.jl"
++++ "b/src/entities/templecrackedblock.jl"
+@@ -3,14 +3,14 @@ module TempleCrackedBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Temple Cracked Block" => Ahorn.EntityPlacement(
++    "Temple - Cracked Block" => Ahorn.EntityPlacement(
+         Maple.TempleCrackedBlock,
+         "rectangle",
+         Dict{String, Any}(
+             "persistent" => false
+         )
+     ),
+-    "Temple Cracked Block (Persistent)" => Ahorn.EntityPlacement(
++    "Temple - Cracked Block (Persistent)" => Ahorn.EntityPlacement(
+         Maple.TempleCrackedBlock,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/templeeye.jl" "b/src/entities/templeeye.jl"
+index 39b1d0f..be79a68 100644
+--- "a/src/entities/templeeye.jl"
++++ "b/src/entities/templeeye.jl"
+@@ -3,7 +3,7 @@ module TempleEye
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Temple Eye (Small)" => Ahorn.EntityPlacement(
++    "Temple - Eye (Small)" => Ahorn.EntityPlacement(
+         Maple.TempleEye
+     )
+ )
+diff --git "a/src/entities/templegate.jl" "b/src/entities/templegate.jl"
+index 5865b62..2bb114a 100644
+--- "a/src/entities/templegate.jl"
++++ "b/src/entities/templegate.jl"
+@@ -3,7 +3,7 @@ module TempleGate
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Temple Gate (Theo, Holding Theo)" => Ahorn.EntityPlacement(
++    "Temple - Gate (Theo, Holding Theo)" => Ahorn.EntityPlacement(
+         Maple.TempleGate,
+         "point",
+         Dict{String, Any}(
+@@ -12,7 +12,7 @@ const placements = Ahorn.PlacementDict(
+         )
+     ),
+ 
+-    "Temple Gate (Default, Close Behind)" => Ahorn.EntityPlacement(
++    "Temple - Gate (Default, Close Behind)" => Ahorn.EntityPlacement(
+         Maple.TempleGate,
+         "point",
+         Dict{String, Any}(
+@@ -20,7 +20,7 @@ const placements = Ahorn.PlacementDict(
+             "type" => "CloseBehindPlayer",
+         )
+     ),
+-    "Temple Gate (Mirror, Close Behind)" => Ahorn.EntityPlacement(
++    "Temple - Gate (Mirror, Close Behind)" => Ahorn.EntityPlacement(
+         Maple.TempleGate,
+         "point",
+         Dict{String, Any}(
+@@ -29,7 +29,7 @@ const placements = Ahorn.PlacementDict(
+         )
+     ),
+ 
+-    "Temple Gate (Default, Nearest Switch)" => Ahorn.EntityPlacement(
++    "Temple - Gate (Default, Nearest Switch)" => Ahorn.EntityPlacement(
+         Maple.TempleGate,
+         "point",
+         Dict{String, Any}(
+@@ -37,7 +37,7 @@ const placements = Ahorn.PlacementDict(
+             "type" => "NearestSwitch",
+         )
+     ),
+-    "Temple Gate (Mirror, Nearest Switch)" => Ahorn.EntityPlacement(
++    "Temple - Gate (Mirror, Nearest Switch)" => Ahorn.EntityPlacement(
+         Maple.TempleGate,
+         "point",
+         Dict{String, Any}(
+@@ -47,7 +47,7 @@ const placements = Ahorn.PlacementDict(
+     ),
+ 
+ 
+-    "Temple Gate (Default, Touch Switches)" => Ahorn.EntityPlacement(
++    "Temple - Gate (Default, Touch Switches)" => Ahorn.EntityPlacement(
+         Maple.TempleGate,
+         "point",
+         Dict{String, Any}(
+@@ -55,7 +55,7 @@ const placements = Ahorn.PlacementDict(
+             "type" => "TouchSwitches",
+         )
+     ),
+-    "Temple Gate (Mirror, Touch Switches)" => Ahorn.EntityPlacement(
++    "Temple - Gate (Mirror, Touch Switches)" => Ahorn.EntityPlacement(
+         Maple.TempleGate,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/templemirror.jl" "b/src/entities/templemirror.jl"
+index dcdb52b..ec29269 100644
+--- "a/src/entities/templemirror.jl"
++++ "b/src/entities/templemirror.jl"
+@@ -3,7 +3,7 @@ module TempleMirror
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Temple Mirror" => Ahorn.EntityPlacement(
++    "Temple - Mirror" => Ahorn.EntityPlacement(
+         Maple.TempleMirror,
+         "rectangle"
+     )
+diff --git "a/src/entities/templemirrorportal.jl" "b/src/entities/templemirrorportal.jl"
+index 061d466..10eae59 100644
+--- "a/src/entities/templemirrorportal.jl"
++++ "b/src/entities/templemirrorportal.jl"
+@@ -3,7 +3,7 @@ module TempleMirrorPortal
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Temple Mirror Portal" => Ahorn.EntityPlacement(
++    "Temple - Mirror Portal" => Ahorn.EntityPlacement(
+         Maple.TempleMirrorPortal
+     )
+ )
+diff --git "a/src/entities/tentacles.jl" "b/src/entities/tentacles.jl"
+index 671a6a9..7a9de03 100644
+--- "a/src/entities/tentacles.jl"
++++ "b/src/entities/tentacles.jl"
+@@ -3,7 +3,7 @@ module Tentacles
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Tentacles" => Ahorn.EntityPlacement(
++    "Reflection - Tentacles" => Ahorn.EntityPlacement(
+         Maple.Tentacles,
+         "point",
+         Dict{String, Any}(),
+diff --git "a/src/entities/theocrystal.jl" "b/src/entities/theocrystal.jl"
+index 9ce8171..6f09a5d 100644
+--- "a/src/entities/theocrystal.jl"
++++ "b/src/entities/theocrystal.jl"
+@@ -3,7 +3,7 @@ module TheoCrystal
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Theo Crystal" => Ahorn.EntityPlacement(
++    "Temple - Theo Crystal" => Ahorn.EntityPlacement(
+         Maple.TheoCrystal
+     )
+ )
+diff --git "a/src/entities/theocrystalpedestal.jl" "b/src/entities/theocrystalpedestal.jl"
+index 6d75029..0f2388b 100644
+--- "a/src/entities/theocrystalpedestal.jl"
++++ "b/src/entities/theocrystalpedestal.jl"
+@@ -3,7 +3,7 @@ module TheoCrystalPedestal
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Theo Crystal Pedestal" => Ahorn.EntityPlacement(
++    "Temple - Theo Crystal Pedestal" => Ahorn.EntityPlacement(
+         Maple.TheoCrystalPedestal
+     )
+ )
+diff --git "a/src/entities/torch.jl" "b/src/entities/torch.jl"
+index 1fab9be..f4c22bc 100644
+--- "a/src/entities/torch.jl"
++++ "b/src/entities/torch.jl"
+@@ -3,14 +3,14 @@ module Torch
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Torch" => Ahorn.EntityPlacement(
++    "All - Torch" => Ahorn.EntityPlacement(
+         Maple.Torch,
+         "point",
+         Dict{String, Any}(
+             "startLit" => false
+         )
+     ),
+-    "Torch (Lit)" => Ahorn.EntityPlacement(
++    "All - Torch (Lit)" => Ahorn.EntityPlacement(
+         Maple.Torch,
+         "point",
+         Dict{String, Any}(
+diff --git "a/src/entities/trapdoor.jl" "b/src/entities/trapdoor.jl"
+index 50ed269..ac24670 100644
+--- "a/src/entities/trapdoor.jl"
++++ "b/src/entities/trapdoor.jl"
+@@ -3,7 +3,7 @@ module Trapdoor
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Trapdoor" => Ahorn.EntityPlacement(
++    "Resort - Trapdoor" => Ahorn.EntityPlacement(
+         Maple.Trapdoor
+     )
+ )
+diff --git "a/src/entities/wallbooster.jl" "b/src/entities/wallbooster.jl"
+index 53e8f49..aae2470 100644
+--- "a/src/entities/wallbooster.jl"
++++ "b/src/entities/wallbooster.jl"
+@@ -3,14 +3,14 @@ module WallBooster
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Wall Booster (Right)" => Ahorn.EntityPlacement(
++    "Core - Wall Booster (Right)" => Ahorn.EntityPlacement(
+         Maple.WallBooster,
+         "rectangle",
+         Dict{String, Any}(
+             "left" => true
+         )
+     ),
+-    "Wall Booster (Left)" => Ahorn.EntityPlacement(
++    "Core - Wall Booster (Left)" => Ahorn.EntityPlacement(
+         Maple.WallBooster,
+         "rectangle",
+         Dict{String, Any}(
+diff --git "a/src/entities/watchtower.jl" "b/src/entities/watchtower.jl"
+index d04e964..b8a416e 100644
+--- "a/src/entities/watchtower.jl"
++++ "b/src/entities/watchtower.jl"
+@@ -3,7 +3,7 @@ module Watchtower
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Watchtower" => Ahorn.EntityPlacement(
++    "All - Watchtower" => Ahorn.EntityPlacement(
+         Maple.Towerviewer
+     ),
+ )
+diff --git "a/src/entities/water.jl" "b/src/entities/water.jl"
+index fa5a9b4..356ae40 100644
+--- "a/src/entities/water.jl"
++++ "b/src/entities/water.jl"
+@@ -3,7 +3,7 @@ module Water
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Water" => Ahorn.EntityPlacement(
++    "All - Water" => Ahorn.EntityPlacement(
+         Maple.Water,
+         "rectangle"
+     ),
+diff --git "a/src/entities/waterfall.jl" "b/src/entities/waterfall.jl"
+index 631a80c..5d2d115 100644
+--- "a/src/entities/waterfall.jl"
++++ "b/src/entities/waterfall.jl"
+@@ -72,7 +72,7 @@ function getHeight(entity::Maple.Waterfall, room::Maple.Room)
+ end
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Waterfall" => Ahorn.EntityPlacement(
++    "All - Waterfall" => Ahorn.EntityPlacement(
+         Maple.Waterfall
+     )
+ )
+diff --git "a/src/entities/whiteblock.jl" "b/src/entities/whiteblock.jl"
+index b945ea4..d81e6c6 100644
+--- "a/src/entities/whiteblock.jl"
++++ "b/src/entities/whiteblock.jl"
+@@ -3,7 +3,7 @@ module WhiteBlock
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "White Block" => Ahorn.EntityPlacement(
++    "Ridge - White Block" => Ahorn.EntityPlacement(
+         Maple.WhiteBlock
+     )
+ )
+diff --git "a/src/entities/wire.jl" "b/src/entities/wire.jl"
+index 7d226f6..a7a1af1 100644
+--- "a/src/entities/wire.jl"
++++ "b/src/entities/wire.jl"
+@@ -3,7 +3,7 @@ module Wire
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Wire" => Ahorn.EntityPlacement(
++    "All - Wire" => Ahorn.EntityPlacement(
+         Maple.Wire,
+         "line"
+     )
+diff --git "a/src/entities/zipmover.jl" "b/src/entities/zipmover.jl"
+index b7c8d46..85f259c 100644
+--- "a/src/entities/zipmover.jl"
++++ "b/src/entities/zipmover.jl"
+@@ -3,7 +3,7 @@ module ZipMover
+ using ..Ahorn, Maple
+ 
+ const placements = Ahorn.PlacementDict(
+-    "Zip Mover ($(uppercasefirst(theme)))" => Ahorn.EntityPlacement(
++    "All - Zip Mover ($(uppercasefirst(theme)))" => Ahorn.EntityPlacement(
+         Maple.ZipMover,
+         "rectangle",
+         Dict{String, Any}(
