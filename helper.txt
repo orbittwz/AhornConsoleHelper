@@ -2,7 +2,8 @@ Copy a room from another map
 ======================================
 celesteDir = get(Ahorn.config, "celeste_dir", "")
 m = loadMap(joinpath(celesteDir, "Content", "Maps", "4-GoldenRidge.bin"))
-roomName = "lvl_a-00"
+# m = loadMap(joinpath(celesteDir, "Mods", "Smaerd Nogylop", "Maps", "orbittwz", "smaerdnogylop", "1-rotaveleehtkooti.bin"))
+roomName = "lvl_01a"
 room = getRoomByName(m, roomName)
 push!(loadedState.map.rooms, room)
 updateTreeView!(roomList, getTreeData(loadedState.map))
@@ -58,3 +59,10 @@ bg = deepcopy(m.style.backgrounds)
 append!(loadedState.map.style.foregrounds, fg)
 append!(loadedState.map.style.backgrounds, bg)
 return true
+
+Print music info
+=====================================
+
+for room in Ahorn.loadedState.map.rooms
+    println((room.name, room.music, room.ambienceProgress, room.musicProgress, room.musicLayer1, room.musicLayer2, room.musicLayer3, room.musicLayer4))
+end
